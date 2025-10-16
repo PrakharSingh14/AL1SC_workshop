@@ -1,0 +1,84 @@
+SoLEXS TOOLS INSTALLATION GUIDE
+=========================================
+
+SoLEXS Tools is a Python package developed to facilitate the processing and preparation 
+of SoLEXS data from the Aditya-L1 mission. It includes essential utilities for 
+generating and managing spectral data and calibration files.
+
+These tools are designed to support spectral analysis using scientific software such as 
+XSPEC or Sherpa.
+
+The package also includes the SoLEXS Calibration Database (CALDB), which provides 
+crucial calibration files such as the Auxiliary Response File (ARF) and the 
+Redistribution Matrix File (RMF).
+
+------------------------------------------------------------
+STEP 1: ACTIVATE YOUR CONDA ENVIRONMENT WITH XSPEC
+------------------------------------------------------------
+Ensure you are working within the Conda environment where XSPEC is installed.
+
+    conda activate xspec
+
+This ensures all dependencies required for spectral fitting are correctly configured.
+
+------------------------------------------------------------
+STEP 2: CHECK REQUIREMENTS
+------------------------------------------------------------
+
+2.1. Python Version
+-------------------
+Verify that your Python version is 3.6 or higher:
+
+    python3 --version
+
+2.2. Required Python Packages
+-----------------------------
+Install the required Python dependencies using pip:
+
+    pip install numpy astropy
+
+------------------------------------------------------------
+STEP 3: DOWNLOAD AND INSTALL SOLEXS TOOLS
+------------------------------------------------------------
+
+3.1. Prepare the Directory
+--------------------------
+Create a dedicated directory to store the software package:
+# For example
+
+    mkdir software
+    cd software
+
+3.2. Copy and Extract the Package
+---------------------------------
+Download the SoLEXS Tools package (a .tar.gz file) from the PRADAN website and 
+copy it into the 'software' directory. Then extract the contents:
+
+    tar xvf solexs_tools-1.1.tar.gz
+    cd solexs_tools-1.1
+
+(Replace '1.1' with the actual version number of the package if it differs.)
+
+3.3. Build and Install the Package
+----------------------------------
+Build and install the SoLEXS Tools package using:
+
+    python setup.py build
+    python setup.py install
+
+Make sure you are using the Python interpreter from your XSPEC Conda environment 
+to avoid path or dependency issues.
+
+------------------------------------------------------------
+NOTES
+------------------------------------------------------------
+- Ensure all environment variables (e.g., CALDB) are set correctly before running 
+  analysis scripts.
+- Refer to the SoLEXS User Manual for examples of how to use the installed tools 
+  and scripts.
+
+------------------------------------------------------------
+AUTHOR
+------------------------------------------------------------
+Prepared by: Prakhar Singh
+Affiliation: Aryabhatta Research Institute of Observational Sciences (ARIES), Nainital
