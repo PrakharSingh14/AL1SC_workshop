@@ -1,0 +1,77 @@
+ADITYA-L1 DATA SEARCH AND DOWNLOAD GUIDE
+=========================================
+
+This guide provides step-by-step instructions to access, explore, and download
+Aditya-L1 mission data — with a focus on the SoLEXS (Solar Low Energy X-ray Spectrometer)
+instrument.
+
+------------------------------------------------------------
+1. VISIT THE PRADAN DATA PORTAL
+------------------------------------------------------------
+Go to the official Aditya-L1 data access website:
+
+    https://pradan1.issdc.gov.in/al1/
+
+This is the central portal hosted by ISRO’s ISSDC for Aditya-L1 data products.
+
+------------------------------------------------------------
+2. CREATE AN ACCOUNT
+------------------------------------------------------------
+- Click on the “Sign Up” option to register for a new account.
+- After registration, log in with your credentials to access the data archive.
+
+------------------------------------------------------------
+3. EXPLORE ADITYA-L1 INSTRUMENTS
+------------------------------------------------------------
+Once logged in, you can browse and download data from all instruments aboard Aditya-L1.
+
+Available instruments include:
+    • VELC – Visible Emission Line Coronagraph
+    • SUIT – Solar Ultraviolet Imaging Telescope
+    • SoLEXS – Solar Low Energy X-ray Spectrometer
+    • HEL1OS – High Energy L1 Orbiting X-ray Spectrometer
+    • PAPA – Plasma Analyzer Package for Aditya
+    • MAG – Magnetometer
+    • ASPEX – Aditya Solar Wind Particle Experiment
+
+------------------------------------------------------------
+4. SELECT THE SoLEXS DATASET
+------------------------------------------------------------
+For SoLEXS-related studies:
+- Navigate to the “SoLEXS” section on the PRADAN portal.
+- Browse available datasets based on observation date or product level.
+- Download the relevant FITS files for your analysis.
+
+------------------------------------------------------------
+5. DOWNLOAD THE SoLEXS USER MANUAL
+------------------------------------------------------------
+The user manual contains essential details about:
+    • Instrument specifications
+    • Data format and file structure
+    • Calibration and quick-look analysis guidelines
+
+You can find it in the “Other Downloads” section or directly from:
+
+    https://pradan1.issdc.gov.in/al1/protected/miscDownloads.xhtml
+
+Look for the file:  SoLEXS-UserManual.pdf
+
+------------------------------------------------------------
+6. DOWNLOAD THE SoLEXS TOOLS PACKAGE
+------------------------------------------------------------
+From the same “Other Downloads” section, download the “SoLEXS Tools” package.
+
+They are essential for pre-processing and analyzing SoLEXS data efficiently.
+
+------------------------------------------------------------
+NOTES
+------------------------------------------------------------
+- Always check for the latest data release and version on the portal.
+- Refer to the SoLEXS User Manual for calibration constants and file metadata details.
+- For publication or presentations, acknowledge the Aditya-L1 mission and ISSDC data archive.
+
+------------------------------------------------------------
+AUTHOR
+------------------------------------------------------------
+Prepared by: Prakhar Singh
+Affiliation: Aryabhatta Research Institute of Observational Sciences (ARIES), Nainital
