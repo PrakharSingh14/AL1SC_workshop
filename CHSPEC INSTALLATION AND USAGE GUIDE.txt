@@ -1,0 +1,120 @@
+CHSPEC INSTALLATION AND USAGE GUIDE
+=========================================
+
+INTRODUCTION
+------------------------------------------------------------
+The chspec package provides multiple models for calculating the photon spectrum 
+for different temperature distributions. These models can be loaded into the 
+XSPEC spectral fitting package.
+
+Currently, chspec includes two models:
+
+    • chisoth   : Emission from an isothermal plasma
+    • chgausdem : Emission from a Gaussian distribution of Differential Emission Measure
+
+Both models calculate synthetic photon spectra using a pre-generated spectral 
+library based on the CHIANTI atomic database. The pre-calculated spectra, computed 
+over a temperature grid, are stored in a FITS file for efficient access.
+
+------------------------------------------------------------
+STEP 1: DOWNLOAD THE PACKAGE
+------------------------------------------------------------
+1. Visit the official GitHub repository:
+
+       https://github.com/xastprl/chspec
+
+2. Download the package:
+   - Click on "Code" → "Download ZIP"
+   - Unzip the downloaded file using:
+
+       unzip chspec-main.zip
+
+3. Place the resulting 'chspec-main' directory inside your preferred software folder.
+
+4. If your HEASoft/XSPEC installation is in a different environment, activate it:
+
+       conda activate xspec
+
+5. Verify that HEASoft and XSPEC are available by running:
+
+       which xspec
+       echo $HEADAS
+
+   Example output:
+
+       /home/solar/softwares/heasoft-6.34/x86_64-pc-linux-gnu-libc2.31
+
+   ✅ This confirms that HEASoft is correctly initialized and XSPEC is ready for 
+   compiling and using local models like chspec.
+
+------------------------------------------------------------
+STEP 2: INSTALL CHSPEC
+------------------------------------------------------------
+1. Once HEASoft is initialized, move to the chspec directory:
+
+       cd ~/Work/Aditya_L1/software/chspec-main
+
+2. Run the installation script:
+
+       ./install.sh
+
+This script will:
+   - Download the CHIANTI-based spectral tables into the 'tables/' directory.
+   - Compile the XSPEC local models 'chisoth' and 'chgausdem'.
+
+If the installation runs successfully, you can now load these models in XSPEC.
+
+------------------------------------------------------------
+STEP 3: TEST CHSPEC IN XSPEC
+------------------------------------------------------------
+1. Launch XSPEC by typing:
+
+       xspec
+
+2. Inside the XSPEC prompt, load the chspec models:
+
+       XSPEC> lmod chspec /home/solar/Work/Aditya_L1/software/chspec-main
+
+3. Test if the models are available:
+
+       XSPEC> model chisoth
+       XSPEC> model chgausdem
+
+If these commands execute without errors, the chspec models are installed correctly.
+
+------------------------------------------------------------
+STEP 4 (OPTIONAL): AUTO-LOAD CHSPEC IN XSPEC
+------------------------------------------------------------
+To automatically load chspec each time you start XSPEC, follow these steps:
+
+1. Create the XSPEC configuration directory if it does not exist:
+
+       mkdir -p ~/.xspec
+
+2. Add the chspec load command to your XSPEC startup file:
+
+       echo "lmod chspec /home/solar/Work/Aditya_L1/software/chspec-main" >> ~/.xspec/xspec.rc
+
+   (Replace the path above with the actual directory where chspec is installed.)
+
+3. Verify the addition:
+
+       cat ~/.xspec/xspec.rc
+
+   You should see an entry similar to:
+
+       lmod chspec /home/solar/Work/Aditya_L1/software/chspec-main
+
+------------------------------------------------------------
+NOTES
+------------------------------------------------------------
+- Ensure that HEASoft and XSPEC are properly initialized in your active environment 
+  before running installation or spectral analysis.
+- If installation fails, verify that the CHIANTI tables are downloaded and that 
+  the compiler paths are correctly set in your environment.
+
+------------------------------------------------------------
+AUTHOR
+------------------------------------------------------------
+Prepared by: Prakhar Singh
+Affiliation: Aryabhatta Research Institute of Observational Sciences (ARIES), Nainital
